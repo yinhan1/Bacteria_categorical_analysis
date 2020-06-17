@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1587673983055.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C515FFA7",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1587673983055,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "CDAC2CC5",
+        "caption" : "table_alive",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=table_alive&cache_key=CDAC2CC5",
+        "displayedObservations" : 5,
+        "environment" : "",
+        "expression" : "table_alive",
+        "object" : "table_alive",
+        "preview" : 0,
+        "totalObservations" : 5,
+        "variables" : 7
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

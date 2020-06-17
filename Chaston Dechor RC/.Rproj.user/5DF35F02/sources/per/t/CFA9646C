@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1592172453835.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "54|67|62|0|\n63|19|82|0|\n83|25|103|0|\n104|67|115|0|\n116|71|119|0|\n120|30|149|0|\n150|26|178|0|\n179|21|207|0|\n210|15|257|0|\n",
+    "hash" : "3247912836",
+    "id" : "CFA9646C",
+    "lastKnownWriteTime" : 1592353672,
+    "last_content_update" : 1592353672528,
+    "path" : "~/Dropbox (CSU Fullerton)/Research/Flies/Robert -- statistical analysis/Firm_Prot/messy code.R",
+    "project_path" : "messy code.R",
+    "properties" : {
+        "cursorPosition" : "259,0",
+        "scrollLine" : "105",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

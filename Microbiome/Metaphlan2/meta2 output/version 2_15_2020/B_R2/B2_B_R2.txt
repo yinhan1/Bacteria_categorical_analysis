@@ -1,0 +1,22 @@
+#mpa_v296_CHOCOPhlAn_201901
+#/Users/hanyin/opt/anaconda3/envs/newenv2/bin/metaphlan2.py /Volumes/Han_SSD/ABC_data/B2_B_R2.fastq.gz --input_type fastq
+#SampleID	Metaphlan2_Analysis
+#clade_name	NCBI_tax_id	relative_abundance
+k__Bacteria	2	100.0	
+k__Bacteria|p__Firmicutes	2|1239	71.29983	
+k__Bacteria|p__Proteobacteria	2|1224	28.70017	
+k__Bacteria|p__Firmicutes|c__Bacilli	2|1239|91061	71.29983	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria	2|1224|28211	28.70017	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales	2|1239|91061|186826	71.29983	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rhodospirillales	2|1224|28211|204441	28.70017	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Lactobacillaceae	2|1239|91061|186826|33958	36.47539	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Leuconostocaceae	2|1239|91061|186826|81850	34.82444	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rhodospirillales|f__Acetobacteraceae	2|1224|28211|204441|433	28.70017	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Lactobacillaceae|g__Lactobacillus	2|1239|91061|186826|33958|1578	36.47539	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Leuconostocaceae|g__Weissella	2|1239|91061|186826|81850|46255	34.82444	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rhodospirillales|f__Acetobacteraceae|g__Acetobacter	2|1224|28211|204441|433|434	28.70017	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Leuconostocaceae|g__Weissella|s__Weissella_viridescens	2|1239|91061|186826|81850|46255|1629	32.4417	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Lactobacillaceae|g__Lactobacillus|s__Lactobacillus_plantarum	2|1239|91061|186826|33958|1578|1590	31.03102	#Additional species represented by this clade: k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Lactobacillaceae|g__Lactobacillus|s__Lactobacillus_sp_ATCC_15578
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rhodospirillales|f__Acetobacteraceae|g__Acetobacter|s__Acetobacter_malorum	2|1224|28211|204441|433|434|178901	28.70017	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Lactobacillaceae|g__Lactobacillus|s__Lactobacillus_brevis	2|1239|91061|186826|33958|1578|1580	5.44437	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Leuconostocaceae|g__Weissella|s__Weissella_minor	2|1239|91061|186826|81850|46255|1620	2.38274	

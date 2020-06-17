@@ -1,0 +1,23 @@
+#mpa_v296_CHOCOPhlAn_201901
+#/Users/hanyin/opt/anaconda3/envs/newenv2/bin/metaphlan2.py /Volumes/Han_SSD/ABC_data/BO5_B_R1.fastq.gz --input_type fastq
+#SampleID	Metaphlan2_Analysis
+#clade_name	NCBI_tax_id	relative_abundance
+k__Bacteria	2	100.0	
+k__Bacteria|p__Proteobacteria	2|1224	73.13209	
+k__Bacteria|p__Firmicutes	2|1239	26.86791	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria	2|1224|28211	73.13209	
+k__Bacteria|p__Firmicutes|c__Bacilli	2|1239|91061	26.86791	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rhodospirillales	2|1224|28211|204441	70.26768	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales	2|1239|91061|186826	26.86791	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rickettsiales	2|1224|28211|766	2.86441	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rhodospirillales|f__Acetobacteraceae	2|1224|28211|204441|433	70.26768	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Leuconostocaceae	2|1239|91061|186826|81850	26.86791	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rickettsiales|f__Anaplasmataceae	2|1224|28211|766|942	2.86441	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rhodospirillales|f__Acetobacteraceae|g__Acetobacter	2|1224|28211|204441|433|434	70.26768	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Leuconostocaceae|g__Weissella	2|1239|91061|186826|81850|46255	26.86791	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rickettsiales|f__Anaplasmataceae|g__Wolbachia	2|1224|28211|766|942|953	2.86441	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rhodospirillales|f__Acetobacteraceae|g__Acetobacter|s__Acetobacter_tropicalis	2|1224|28211|204441|433|434|104102	66.17626	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Leuconostocaceae|g__Weissella|s__Weissella_viridescens	2|1239|91061|186826|81850|46255|1629	26.86791	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rickettsiales|f__Anaplasmataceae|g__Wolbachia|s__Wolbachia_endosymbiont_of_Brugia_malayi	2|1224|28211|766|942|953|80849	2.86441	#Additional species represented by this clade: k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rickettsiales|f__Anaplasmataceae|g__Wolbachia|s__Wolbachia_endosymbiont_of_Brugia_malayi
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rhodospirillales|f__Acetobacteraceae|g__Acetobacter|s__Acetobacter_oryzifermentans	2|1224|28211|204441|433|434|1633874	2.35902	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rhodospirillales|f__Acetobacteraceae|g__Acetobacter|s__Acetobacter_pomorum	2|1224|28211|204441|433|434|65959	1.73239	#Additional species represented by this clade: k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rhodospirillales|f__Acetobacteraceae|g__Acetobacter|s__Acetobacter_sp_JWB

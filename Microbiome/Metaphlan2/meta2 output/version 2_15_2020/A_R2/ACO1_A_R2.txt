@@ -1,0 +1,11 @@
+#mpa_v296_CHOCOPhlAn_201901
+#/Users/hanyin/opt/anaconda3/envs/newenv2/bin/metaphlan2.py /Users/hanyin/Desktop/test/input/ACO1_A_R2.fastq.gz --input_type fastq
+#SampleID	Metaphlan2_Analysis
+#clade_name	NCBI_tax_id	relative_abundance
+k__Bacteria	2	100.0	
+k__Bacteria|p__Firmicutes	2|1239	100.0	
+k__Bacteria|p__Firmicutes|c__Bacilli	2|1239|91061	100.0	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales	2|1239|91061|186826	100.0	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Lactobacillaceae	2|1239|91061|186826|33958	100.0	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Lactobacillaceae|g__Lactobacillus	2|1239|91061|186826|33958|1578	100.0	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Lactobacillaceae|g__Lactobacillus|s__Lactobacillus_plantarum	2|1239|91061|186826|33958|1578|1590	100.0	#Additional species represented by this clade: k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Lactobacillaceae|g__Lactobacillus|s__Lactobacillus_sp_ATCC_15578

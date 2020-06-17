@@ -1,0 +1,99 @@
+library(tidyverse)
+library(magrittr)
+library(ggsci)
+
+library(survival)
+library(survminer)
+
+# import and convert data type
+table = readxl::read_excel("./data/Mortality Data AB5075 Mutants.xlsx", sheet=2)
+table$Treatment = factor(table$Treatment, levels = c("PBS","AB5075","AB5075 hns","AB5075 ptk","AB5075 opmA"))
+table$Replicate = factor(table$Replicate)
+table$Sex = factor(table$Sex, levels = c("M","F"))
+table$Day = as.integer(table$Day)
+
+# separate raw table
+table_initial = table %>% filter(is.na(Mortality))
+table_dead = table %>% filter(Mortality>0)
+table_alive = table %>% filter(Day==10)
+
+# graph death count
+table %>% 
+  filter(!is.na(Mortality)) %>% 
+  ggplot(aes(x=Day, y=Mortality, fill=Treatment)) +
+  geom_bar(stat = "identity") +
+  scale_x_continuous(breaks=c(0,2,4,6,8,10)) +
+  facet_wrap(~Treatment, ncol=1) +
+  scale_fill_jama() +
+  labs(fill="") +
+  theme_bw()
+
+# graph survival percent
+table_initial %>% 
+  mutate(`Survival %` = 100) %>% 
+  bind_rows(., table) %>% 
+  filter(!is.na(`Survival %`)) %>% 
+  ggplot(aes(x=Day, y=`Survival %`, color=Treatment)) +
+  geom_point() +
+  geom_line(stat = "identity", size=1.2, alpha=0.5) +
+  scale_x_continuous(breaks=c(0,2,4,6,8,10)) +
+  scale_color_jama() +
+  labs(color="") +
+  theme_bw() +
+  ylim(50,100)
+
+# expand table to individual data
+data_dead = table_dead[rep(1:nrow(table_dead), table_dead$Mortality),] %>% mutate(dead = 1)
+data_alive = table_alive[rep(1:nrow(table_alive), table_alive$`Flies Remaining`),] %>% mutate(dead = 0)
+data = bind_rows(data_dead, data_alive) %>% select(c(Treatment,Replicate,Sex,Day,dead))
+
+# log rank test
+fit = survfit(Surv(Day, dead) ~ Treatment, data = data)
+pairwise_survdiff(Surv(Day, dead == 1) ~ Treatment, p.adjust.method = "holm", data = data)
+
+# cox mode
+sub_data = filter(data,Treatment!="PBS") %>% droplevels()
+model = coxph(Surv(Day, dead) ~ Treatment, data = sub_data)
+summary(model)
+
+# power analysis
+tb_a = table_initial %>% select(c(Treatment,`Flies Remaining`)) %>% set_colnames(c("Treatment","total"))
+tb_b = table_alive %>% select(c(Treatment,`Flies Remaining`)) %>% set_colnames(c("Treatment","alive"))
+tb = full_join(tb_a, tb_b, by="Treatment") %>% mutate(dead = total - alive)  
+tb$fake_dead = c(tb$total[1]*2/185, tb$dead[2:5])
+tb$pi = tb$total / sum(tb$total)
+tb$ratio = tb$fake_dead/tb$total
+
+top = (qnorm(0.975)+qnorm(0.9))^2
+hr = seq(1.3,3,length.out = 20) 
+
+dummy = data.frame()
+for(i in 2:5){
+  bottom = (log(hr)^2)*tb$pi[1]*tb$pi[i]
+  dummy_i = data.frame(
+    tag = tb$Treatment[i], 
+    hazard = hr, 
+    death = top/bottom) %>% 
+    mutate(size = death/(tb$ratio[1]+tb$ratio[i]))
+  dummy = bind_rows(dummy,dummy_i)
+}
+dummy$tag = factor(dummy$tag, levels=levels(tb$Treatment))
+
+dummy %>% 
+  ggplot(aes(x=size, y=hazard, color=tag)) +
+  geom_line(alpha=0.6, size=1, position=position_jitter(w=0.02, h=0.01)) +
+  geom_point(size=1) +
+  geom_vline(xintercept = 1000, linetype="dashed", size=0.5, color="grey60") +
+  annotate("text", x=2500, y = 1.4, label="1,000", size=3, color="grey60") +
+  scale_colour_jama(drop=FALSE) +
+  theme_bw() +
+  labs(x="Sample Size", y="Hazard Ratio", color="")
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+#mpa_v296_CHOCOPhlAn_201901
+#/Users/hanyin/opt/anaconda3/envs/newenv2/bin/metaphlan2.py /Volumes/Han_SSD/ABC_data/ACO5_B_R1.fastq.gz --input_type fastq
+#SampleID	Metaphlan2_Analysis
+#clade_name	NCBI_tax_id	relative_abundance
+k__Bacteria	2	100.0	
+k__Bacteria|p__Firmicutes	2|1239	93.67249	
+k__Bacteria|p__Proteobacteria	2|1224	6.32751	
+k__Bacteria|p__Firmicutes|c__Bacilli	2|1239|91061	93.67249	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria	2|1224|28211	6.32751	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales	2|1239|91061|186826	93.67249	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rhodospirillales	2|1224|28211|204441	6.32751	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Leuconostocaceae	2|1239|91061|186826|81850	93.67249	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rhodospirillales|f__Acetobacteraceae	2|1224|28211|204441|433	6.32751	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Leuconostocaceae|g__Weissella	2|1239|91061|186826|81850|46255	93.67249	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rhodospirillales|f__Acetobacteraceae|g__Acetobacter	2|1224|28211|204441|433|434	6.32751	
+k__Bacteria|p__Firmicutes|c__Bacilli|o__Lactobacillales|f__Leuconostocaceae|g__Weissella|s__Weissella_viridescens	2|1239|91061|186826|81850|46255|1629	93.67249	
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rhodospirillales|f__Acetobacteraceae|g__Acetobacter|s__Acetobacter_pomorum	2|1224|28211|204441|433|434|65959	4.77983	#Additional species represented by this clade: k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rhodospirillales|f__Acetobacteraceae|g__Acetobacter|s__Acetobacter_sp_JWB
+k__Bacteria|p__Proteobacteria|c__Alphaproteobacteria|o__Rhodospirillales|f__Acetobacteraceae|g__Acetobacter|s__Acetobacter_oryzifermentans	2|1224|28211|204441|433|434|1633874	1.54768	

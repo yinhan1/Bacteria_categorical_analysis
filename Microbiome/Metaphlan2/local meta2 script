@@ -1,0 +1,16 @@
+
+# installation
+conda create -n newenv2 python=3.5
+source activate newenv2
+conda install -c bioconda metaphlan2
+
+# run the script
+metaphlan2.py /Volumes/Han_SSD/ABC_data/ACO1_A_R1.fastq.gz --input_type fastq > /Volumes/Han_SSD/output/ACO1_A_R1.txt
+
+# merge tables 
+merge_metaphlan_tables.py /Volumes/Han_SSD/output/A_R1/*.txt > /Volumes/Han_SSD/output/merged_table/merged_A_R1.txt
+
+# keep species level only
+grep -E "(s__)|(^clade_name)" /Volumes/Han_SSD/output/merged_table/merged_A_R1.txt | grep -v "t__" | sed 's/^.*s__//g' > /Volumes/Han_SSD/output/merged_table/clean_A_R1.txt
+
+

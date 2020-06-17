@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1588367265607.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3574601171",
+    "id" : "22A7E017",
+    "lastKnownWriteTime" : 1589226518,
+    "last_content_update" : 1589226519036,
+    "path" : "~/Dropbox (CSU Fullerton)/Han/Mortality AB5075 CSF/script/cox_model.R",
+    "project_path" : "script/cox_model.R",
+    "properties" : {
+        "cursorPosition" : "73,0",
+        "scrollLine" : "52"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

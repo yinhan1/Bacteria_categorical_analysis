@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1578703665453.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3176072888",
+    "id" : "7C8FCDB2",
+    "lastKnownWriteTime" : 1578722028,
+    "last_content_update" : 1578722028114,
+    "path" : "~/Dropbox (CSU Fullerton)/Research/Flies/Robert -- statistical analysis/Mortality AB5075 Mutants/R code/R code.R",
+    "project_path" : "R code/R code.R",
+    "properties" : {
+        "cursorPosition" : "60,14",
+        "scrollLine" : "56",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

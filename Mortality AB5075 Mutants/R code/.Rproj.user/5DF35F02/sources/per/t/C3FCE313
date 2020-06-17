@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1578432298362.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2711807852",
+    "id" : "C3FCE313",
+    "lastKnownWriteTime" : 1578432333,
+    "last_content_update" : 1578432333102,
+    "path" : "~/Dropbox (CSU Fullerton)/Research Project/Flies/Robert -- statistical analysis/Mortality AB5075/R code.Rmd",
+    "project_path" : "R code.Rmd",
+    "properties" : {
+        "cursorPosition" : "1,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

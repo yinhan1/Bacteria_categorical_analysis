@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1587955015922.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1635647024",
+    "id" : "3CB92374",
+    "lastKnownWriteTime" : 1588566878,
+    "last_content_update" : 1588566878997,
+    "path" : "~/Dropbox (CSU Fullerton)/Research/Flies/Robert -- statistical analysis/Mortality AB5075 CSF/script/cox_model.R",
+    "project_path" : "script/cox_model.R",
+    "properties" : {
+        "cursorPosition" : "18,19",
+        "scrollLine" : "4",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
