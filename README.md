@@ -1,1 +1,1 @@
-Categorical Analysis tools on the bacteria counts data
+Categorical analysis tools on the bacteria counts data
