@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1593197252692.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2048602972",
+    "id" : "595B347B",
+    "lastKnownWriteTime" : 1593198166,
+    "last_content_update" : 1593198166033,
+    "path" : "~/Dropbox (CSU Fullerton)/Research/Flies/Robert -- statistical analysis/Chaston Dechor RC/script/messy code.R",
+    "project_path" : "script/messy code.R",
+    "properties" : {
+        "cursorPosition" : "262,25",
+        "scrollLine" : "253"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
