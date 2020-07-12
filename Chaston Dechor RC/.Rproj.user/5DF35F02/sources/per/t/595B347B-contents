@@ -1,17 +1,17 @@
-# Last Edited: 06/26/2020
+# Last Edited: 06/17/2020
 
 library(tidyverse)
 library(magrittr)
 library(ggsci)
 
 data <- 
-  readxl::read_excel('data/Chaston Dechor Corrected.xlsx') %>% 
+  readxl::read_excel('Chaston Dechor RC.xlsx') %>% 
   select(
     'Total CFU Proteobacteria',
     'Total CFU Firmicutes',
     'Total CFU',
     'Population',
-    'Treatment Replicate',
+    'replicate',
     'sex',
     'genotype'
   ) %>% 
@@ -64,15 +64,13 @@ set_fills <- c(
 #### by replicates #### 
 
 data_melt %>% 
-  # filter(Bacteria == "Proteobacteria") %>%
-  # filter(Bacteria == "Firmicutes") %>%
-  filter(Bacteria == "Total") %>% 
+  # filter(Bacteria == "Total") %>% 
   group_by(Bacteria) %>% 
   ggplot(aes(x = as.factor(Replicate),
              y = Count,
              fill = Sex)) +
   geom_boxplot(alpha = 0.5) +
-  geom_dotplot(dotsize = 0.8,
+  geom_dotplot(dotsize = 1,
                binaxis = "y", 
                stackdir = "center", 
                position = "dodge") + 
@@ -86,9 +84,7 @@ data_melt %>%
 #### replicates combined ####
 
 data_melt %>%  
-  # filter(Bacteria == "Proteobacteria") %>%
-  filter(Bacteria == "Firmicutes") %>%
-  # filter(Bacteria == "Total") %>% 
+  filter(Bacteria == "Total") %>% 
   group_by(Bacteria) %>% 
   ggplot(aes(x = Population, 
              y = Count, 
@@ -106,12 +102,9 @@ data_melt %>%
   theme(legend.position="top")
 
 
-
 #### -----------------   Step 0.2: Stats Tables  ----------------- ####
 
 data_melt %>% 
-  # filter(Bacteria == "Proteobacteria") %>%
-  # filter(Bacteria == "Firmicutes") %>%
   filter(Bacteria == "Total") %>% 
   group_by(Population, Sex) %>% 
   summarise(n = length(Count),
