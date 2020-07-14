@@ -37,12 +37,12 @@ df %>%
 
 
 
-####  --------------- step 2.1: Model on Firmicutes  ---------------  ####
+####  --------------- step 2.1: Model on Firmicutes cnt  ---------------  ####
 
 library(lme4)
+library(lmerTest)
 
 #### models setup ####
-
 df_temp = df %>% filter(!is.na(firm)) 
 model1 = lmer(firm ~ population + (1|replicate), df_temp, REML = FALSE)
 model2 = lmer(firm ~ sex + (1|replicate), df_temp, REML = FALSE)
@@ -55,6 +55,7 @@ anova(model1, model3)
 anova(model2, model3)
 anova(model3, model4)
 anova(model4, model5)  
+rand(model5)
 # best model 5
 
 
@@ -72,10 +73,9 @@ model = model5
 summary(model)
 
 
-####  --------------- step 2.2: Model on Proteobacteria  ---------------  ####
+####  --------------- step 2.2: Model on Proteobacteria cnt  ---------------  ####
 
 #### model selection #### 
-
 df_temp = df %>% filter(!is.na(prot)) 
 model1 = lmer(prot ~ population + (1|replicate), df_temp, REML = FALSE)
 model2 = lmer(prot ~ sex + (1|replicate), df_temp, REML = FALSE)
@@ -83,12 +83,13 @@ model3 = lmer(prot ~ population + sex + (1|replicate), df_temp, REML = FALSE)
 model4 = lmer(prot ~ population + sex + population:sex + (1|replicate), df_temp, REML = FALSE)
 # overfitting when (population|replicate)
 
+
 #### model selection #### 
 anova(model1, model3)
 anova(model2, model3)
 anova(model3, model4)
+rand(model3)
 # best model 3
-
 
 #### assumptions check #### 
 model = model3
@@ -99,16 +100,43 @@ model = model3
   qqnorm(as.data.frame(ranef(model))[,4])
 }
 
+
 #### model summary ####
 summary(model)
 
 
 
+####  --------------- step 3: Model on ratios of cnt  ---------------  ####
+
+#### model selection #### 
+df_temp = df %>% na.omit() %>% mutate(ratio = firm / prot)
+model1 = lmer(ratio ~ population + (1|replicate), df_temp, REML = FALSE)
+model2 = lmer(ratio ~ sex + (1|replicate), df_temp, REML = FALSE)
+model3 = lmer(ratio ~ population + sex + (1|replicate), df_temp, REML = FALSE)
+model4 = lmer(ratio ~ population + sex + population:sex + (1|replicate), df_temp, REML = FALSE)
+
+model3.0 = lm(ratio ~ population + sex, df_temp)
+model4.0 = lm(ratio ~ population + sex + population:sex, df_temp)
+                
+#### model selection #### 
+anova(model1, model3)
+anova(model2, model3)
+anova(model3, model4)
+rand(model3)
+anova(model3, model3.0)
+anova(model3.0, model4.0)
 
 
+#### assumptions check #### 
+model = model3.0
+{
+  par(mfrow=c(2,2))
+  plot(model)
+}
 
-
-
+#### model summary ####
+summary(model)
+anova(model)
 
 
 
