@@ -138,10 +138,16 @@ model = model3.0
 summary(model)
 anova(model)
 
+library(boot)
 
+boot.fn = function(data, index){
+  return( coef(glm(default ~ income + balance, data = Default, family = binomial, subset = index )) )
+}
 
-
-
+set.seed(1)
+boot(data = Default, boot.fn, 1000)
+set.seed(1)
+boot(data = Auto, boot.fn, 1000)
 
 
 

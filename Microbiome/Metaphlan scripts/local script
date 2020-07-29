@@ -1,0 +1,56 @@
+
+# installation
+conda create -n newenv2 python=3.5
+source activate newenv2
+conda install -c bioconda metaphlan2
+
+# download database
+
+# run the script
+metaphlan2.py /Volumes/Han_SSD/ABC_data/ACO1_A_R1.fastq.gz --input_type fastq > /Volumes/Han_SSD/output/ACO1_A_R1.txt
+
+# run 
+metaphlan2.py /Volumes/Han_SSD/ABC_data/ACO4_A_R1.fastq.gz --bt2_ps very-sensitive --input_type fastq  --no_map --nproc 2 > /Volumes/Han_SSD/output/ACO4_A_R1_copy.txt
+
+
+# merge tables 
+merge_metaphlan_tables.py /Volumes/Han_SSD/output/A_R1/*.txt > /Volumes/Han_SSD/output/merged_table/merged_A_R1.txt
+
+# keep species level only
+grep -E "(s__)|(^clade_name)" /Volumes/Han_SSD/output/merged_table/merged_A_R1.txt | grep -v "t__" | sed 's/^.*s__//g' > /Volumes/Han_SSD/output/merged_table/clean_A_R1.txt
+
+
+######################################################
+
+##                  METAPHLAN 3 
+
+######################################################
+
+## ESTABLISH ENVIRONMENT
+conda create --name mpa -c bioconda python=3.7 metaphlan
+source activate mpa
+
+
+
+## RUN METAPHLAN 3.0
+## estimate the fraction of the metagenome composed by unknown microbes. The relative 
+## abundance profile is scaled according to the percentage of reads mapping to a known 
+## clade.
+
+metaphlan /Volumes/Han_SSD/ABC_data/BO2_A_R1.fastq.gz --bowtie2out /Volumes/Han_SSD/output/BO2_A_R1.bowtie2.bz2 --bt2_ps very-sensitive --nproc 5 --input_type fastq -o /Volumes/Han_SSD/output/BO2_A_R1.txt
+
+
+
+metaphlan /Volumes/Han_SSD/ABC_data/BO2_A_R1.fastq.gz --index mpa_v20_m200  --bowtie2db /Users/hanyin/Downloads/mpa_v20_m200  --no_map --input_type fastq -o /Users/hanyin/Desktop/test.txt
+
+
+
+
+
+
+
+
+
+
+
+
