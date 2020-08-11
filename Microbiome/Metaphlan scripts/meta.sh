@@ -53,3 +53,5 @@ for path in ${in_dir}/${replicate}.fastq.gz; do
 
 done 
 
+# Lengths of sequence and quality values differs for UNC10-SN254:591:HAA11ADXX:1:2203:7086:40592 2:N:0:ACGATA (100 and 2305).
+
